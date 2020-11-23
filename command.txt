@@ -1,0 +1,11 @@
+cpu1:
+python topic.py     full-model 5 epochs
+
+cpu4:
+python topic.py --gpu 0 --baseline sbert
+python topic.py --gpu 2 --baseline no_debater
+python topic.py --gpu 3 --baseline no_argument
+
+cpu2:
+python topic.py --gpu 0 --baseline no_topic
+python topic.py --gpu 1 --baseline one_hot
